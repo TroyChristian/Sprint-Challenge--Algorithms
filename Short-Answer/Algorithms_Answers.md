@@ -16,7 +16,7 @@ def sprint(n):
 b) Qaudratic time (O(n2)). The Big O notation for this algorithm is qaudratic. The nested for loops hint at this, but when the code is run and n = 10, 40 operations are required. When n = 20 100 operations are required. This ratio tells me that the number of operations are not scaling linearly, or logramithrically, and because the  number of operations are disproportionality increasing this is an instance of qaudratic run time. 
 
 
-c)
+c)O(n), linear time. if bunnies(5) is called 5 operations occur, if bunnies(10) is called, 10 operations occur. This algorithm uses recursion and identifies a base case of bunnies ==0. proceeds to subtract 1 from bunny essentially until bunnies == 0.
 
 ## Exercise II
 
