@@ -13,7 +13,7 @@ def sprint(n):
     print(operations)
 
 
-b)
+b) Qaudratic time (O(n2)). The Big O notation for this algorithm is qaudratic. The nested for loops hint at this, but when the code is run and n = 10, 40 operations are required. When n = 20 100 operations are required. This ratio tells me that the number of operations are not scaling linearly, or logramithrically, and because the  number of operations are disproportionality increasing this is an instance of qaudratic run time. 
 
 
 c)
