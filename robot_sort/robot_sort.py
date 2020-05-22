@@ -1,3 +1,4 @@
+
 class SortingRobot:
     def __init__(self, l):
         """
@@ -96,8 +97,42 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+       #Grab the first item
+        self.swap_item()
+        while True:
+            ##The light being on means, start searching
+            if self.light_is_on():
+                break
+            
+
+            self.set_light_on()
+           #turn light on if it was off
+            while self.move_right():
+                #If list element is not none, and is less than robots item, swap. 
+                #handles moving up the list to the right
+                if self.compare_item() is not None: #not, none less than or equal to
+                    if self.compare_item() == -1 or self.compare_item() == 0:
+                        self.swap_item()
+                    else:
+                        #We've hit the case where we encounter None in the list
+                        self.set_light_off()
+
+            if self.compare_item() is not None:
+                #Checking if element is greater than our item or None
+                if self.compare_item() == 1 or self.compare_item() == 0:
+                    self.swap_item()
+                else:
+                    self.set_light_off()
+
+            while self.move_left():
+                # Same as above, moving left
+               
+                if self.compare_item() is not None:
+                    if self.compare_item() == 1 or self.compare_item() == 0:
+                        self.swap_item()
+                    else:
+                        self.set_light_off()
+        self.swap_item()
 
 
 if __name__ == "__main__":
